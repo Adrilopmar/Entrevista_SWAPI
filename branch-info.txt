@@ -1,0 +1,4 @@
+branch name		details
+-----------------------------------------------------------
+Front-001		login/register sistem + login/register service. simple, not much security
+-----------------------------------------------------------

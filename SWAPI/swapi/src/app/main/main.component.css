@@ -1,0 +1,20 @@
+
+.title{
+    color: #f1f1f1;
+}
+.login-register, .new-user{
+    margin: 15px auto;
+    background-color: #f1f1f1;
+}
+.user-login, .pass-login{
+    flex-direction: column;
+}
+.create-acc, .forgot-pass{
+    color: lightskyblue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.btn{
+    margin: 20px;
+    
+}

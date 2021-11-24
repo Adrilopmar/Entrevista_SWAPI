@@ -1,0 +1,41 @@
+<div *ngIf="!userLogged" class="row justify-content-center">
+    <p class="text-center col-12 title">Log in to know everything about Star Wars starships</p>
+    <div  class="col-5">
+        <div *ngIf="!newUser" class="login-register row  justify-content-center">
+            <div class="col-7 d-flex user-login">
+                <label for="userName">User name:</label>
+                <input type="text" name="userName" #user>
+            </div>
+            <div class="col-7 pass-login d-flex">
+                <div class="row justify-content-between"> 
+                    <label class="col-5" for="password" >Password</label> <p class="forgot-pass text-end">Forgot your password?</p>
+                </div>
+                <input type="password" #pass>
+            </div>
+            <div class="col-7 text-center">
+                <button class="btn btn-primary " (click)="logIn(user.value,pass.value)">Log in</button>
+            </div>
+        </div>
+        <div class="new-user">
+            <div class="text-center">
+                <p *ngIf="!newUser">New user? <span class="create-acc" (click)="register()">Create an account</span></p>
+            </div>
+            <div *ngIf="newUser" class="login-register row  justify-content-center">
+                <div class="col-7 d-flex user-login">
+                    <label for="userName">User name:</label>
+                    <input type="text" name="newUserName" #newUser>
+                </div>
+                <div class="col-7 pass-login d-flex">
+                    <div class="row justify-content-between"> 
+                        <label class="col-5" for="newPassword" >Password</label>
+                    </div>
+                    <input type="password" #newPass>
+                </div>
+                <div class="col-7 text-center">
+                    <button class="btn btn-primary " (click)="registerUser(newUser.value,newPass.value)">Register</button>
+                    <p >Already an account?<span class="create-acc" (click)="register()">Sing in</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
