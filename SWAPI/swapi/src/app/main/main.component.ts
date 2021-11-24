@@ -16,10 +16,20 @@ export class MainComponent implements OnInit {
   userLogged:boolean= false
 logIn(user:any,pass:any){
   this.loginSvc.logIn(user,pass)
+  if(this.loginSvc.error>0){
+    document.getElementById('userLogin')?.classList.add('is-invalid')
+  }
+ 
+    
+  
 this.userLogged=this.loginSvc.userLogged
   }
 registerUser(nick:string, pass:string){
   this.loginSvc.registerUser(nick,pass)
+  if(this.loginSvc.error>0){
+    document.getElementById('newNick')?.classList.add('is-invalid')
+  }
+  
 }
 register(){
   if(this.newUser){

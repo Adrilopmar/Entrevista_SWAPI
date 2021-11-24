@@ -1,6 +1,6 @@
 
 .title{
-    color: #f1f1f1;
+    color: goldenrod;
 }
 .login-register, .new-user{
     margin: 15px auto;
@@ -10,7 +10,7 @@
     flex-direction: column;
 }
 .create-acc, .forgot-pass{
-    color: lightskyblue;
+    color: goldenrod;
     cursor: pointer;
     text-decoration: underline;
 }
