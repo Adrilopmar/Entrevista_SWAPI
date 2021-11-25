@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('http://fonts.cdnfonts.com/css/sf-distant-galaxy');
+*{
+    font-family: 'SF Distant Galaxy', sans-serif;
+}
+body{
+    background-image: url("/assets/img/bg.png") ;
+}

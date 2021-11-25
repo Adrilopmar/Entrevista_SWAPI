@@ -1,0 +1,15 @@
+img{
+    height: 250px;
+}
+h3{
+    color: goldenrod;
+}
+.starship{
+    background: rgb(84,84,84);
+    background: linear-gradient(90deg, rgba(84,84,84,0.84) 0%, rgba(255,255,255,0)50%);
+color: #f1f1f1;
+margin: 100px 0;
+}
+.details{
+    margin: auto 30px;
+}
