@@ -1,6 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, HostListener, OnInit, Inject} from '@angular/core';
 import { RequestService } from '../services/request.service';
+import { faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -16,6 +17,7 @@ export class StarshipsComponent implements OnInit {
   ngOnInit( ): void {
     this.getStarShips()
   } 
+  faChecronUp =faChevronCircleUp;
   showButton:boolean=false
   starships:any=[]
   allStarships:any=[]
@@ -34,7 +36,9 @@ export class StarshipsComponent implements OnInit {
     const scrollTop = this.document.documentElement.scrollTop;
     this.showButton = (yOffSet || scrollTop)>500
   }
-
+goTop(){
+  this.document.documentElement.scrollTop = 0
+}
   conse(){
     console.log(this.starships)
     console.log(this.allStarships, 'totes')

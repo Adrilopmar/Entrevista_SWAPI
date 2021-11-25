@@ -1,7 +1,9 @@
 @import url('http://fonts.cdnfonts.com/css/sf-distant-galaxy');
 *{
     font-family: 'SF Distant Galaxy', sans-serif;
+    scroll-behavior: smooth;
 }
 body{
     background-image: url("/assets/img/bg.png") ;
-}
+    background-attachment: fixed;
+    }

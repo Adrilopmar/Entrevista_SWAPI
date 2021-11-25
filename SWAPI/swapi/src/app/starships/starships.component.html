@@ -9,12 +9,15 @@
                 <div class="starship">
                     <div class="row justify-content-around">
                         <div class="details col-4">
-                            <p>{{nau.name}}</p>
-                            <p>{{nau.cost_in_credits}}</p>
-                            <p>{{nau.crew}}</p>
-                            <p>{{nau.manufacturer}}</p>
+                            <p><b>Name : </b> {{nau.name}}</p>
+                            <p><b>Model : </b> {{nau.model}}</p>
+                            <p><b>Starship class : </b> {{nau.starship_class}}</p>
+                            <p><b>Price : </b> {{nau.cost_in_credits}} credits</p>
+                            <p><b>Crew : </b> {{nau.crew}}</p>
+                            <p><b>Manufacturer : </b> {{nau.manufacturer}}</p>
+                            <button class="btn btn-secondary"> Details</button>
                         </div>
-                         <div class="">
+                         <div class="d-flex">
                              <img src="/assets/img/{{nau.name}}.png" alt="">
                         </div>
                     </div>
@@ -22,5 +25,5 @@
             </div>
         </div>
     </div>
+    <fa-icon *ngIf="showButton" [icon]="faChecronUp" class="back-top" (click)="goTop()"></fa-icon>
 </section>
-

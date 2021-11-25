@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
 import { StarshipsComponent } from './starships/starships.component';
-import{InfiniteScrollModule} from 'ngx-infinite-scroll'
+import{InfiniteScrollModule} from 'ngx-infinite-scroll';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import{InfiniteScrollModule} from 'ngx-infinite-scroll'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
