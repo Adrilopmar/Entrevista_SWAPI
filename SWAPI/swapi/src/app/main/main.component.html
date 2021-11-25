@@ -2,13 +2,14 @@
     <p class="text-center col-12 title">Log in to know everything about Star Wars starships</p>
     <div  class="col-5">
         <div *ngIf="!newUser" class="login-register row  justify-content-center">
-            <div class="col-7 d-flex user-login">
+            <div class="col-7 d-flex user-login mt-3">
                 <label for="userName">User name:</label>
-                <input type="text" name="userName" #user>
+                <input type="text" name="userName" #user id="userLogin">
+                <div class="invalid-feedback"> either user name or password are wrong</div>
             </div>
-            <div class="col-7 pass-login d-flex">
+            <div class="col-7 pass-login d-flex mt-5">
                 <div class="row justify-content-between"> 
-                    <label class="col-5" for="password" >Password</label> <p class="forgot-pass text-end">Forgot your password?</p>
+                    <label class="col-5" for="password" >Password</label> 
                 </div>
                 <input type="password" #pass>
             </div>
@@ -21,21 +22,23 @@
                 <p *ngIf="!newUser">New user? <span class="create-acc" (click)="register()">Create an account</span></p>
             </div>
             <div *ngIf="newUser" class="login-register row  justify-content-center">
-                <div class="col-7 d-flex user-login">
+                <div class="col-7 d-flex user-login mt-3 is-invalid">
                     <label for="userName">User name:</label>
-                    <input type="text" name="newUserName" #newUser>
+                    <input type="text" name="newUserName" #newUser id="newNick">
+                    <div class="invalid-feedback">user already exist</div>
                 </div>
-                <div class="col-7 pass-login d-flex">
+                <div class="col-7 pass-login d-flex mt-5">
                     <div class="row justify-content-between"> 
-                        <label class="col-5" for="newPassword" >Password</label>
+                        <label class="col-5" for="newPassword">Password</label>
                     </div>
                     <input type="password" #newPass>
                 </div>
                 <div class="col-7 text-center">
                     <button class="btn btn-primary " (click)="registerUser(newUser.value,newPass.value)">Register</button>
-                    <p >Already an account?<span class="create-acc" (click)="register()">Sing in</span></p>
+                    <p >Got an account? <span class="create-acc" (click)="register()">Sing in</span></p>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<app-starships *ngIf="userLogged"></app-starships>
